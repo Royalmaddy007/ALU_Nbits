@@ -1,0 +1,71 @@
+module alu8bit(
+    input [7:0]A,B,
+    input [2:0]sel,
+    output reg [7:0]out,
+    output reg cout);
+    wire [7:0]w1,w2,w3,w4,w5,w6,w7,w8;
+    wire c1,c2,c3,c4,c5,c6,c7,c8;
+    assign {c1,w1}=add(A,B);
+    assign {c2,w2}=sub(A,B);
+    assign {c3,w3}=inc(A);
+    assign {c4,w4}=dec(A);
+    assign {c5,w5}=cmp(A);
+    assign {c6,w6}={1'b0,and1(A,B)};
+    assign {c7,w7}={1'b0,or1(A,B)};
+    assign {c8,w8}={1'b0,xor1(A,B)};
+    always@(*)
+        begin
+            case(sel)
+                3'b000:begin out=w1;cout=c1;
+            end
+                3'b001:begin out=w2;cout=c2;
+            end
+                3'b010:begin out=w3;cout=c3;
+            end
+                3'b011:begin out=w4;cout=c4;
+            end
+                3'b100:begin out=w5;cout=c5;
+            end
+                3'b101:begin out=w6;cout=c6;
+            end
+                3'b110:begin out=w7;cout=c7;
+            end
+                3'b111:begin out=w8;cout=c8;
+            end
+            endcase
+        end
+    function [8:0]add;
+        input [7:0]A,B;
+        begin
+            add=A+B;
+        end
+    endfunction
+    function [8:0]sub;
+        input [7:0]a,b;
+        sub=a-b;
+    endfunction
+    function [8:0]inc;
+        input [7:0]a;
+        inc=a+1;
+    endfunction
+    function [8:0]dec;
+        input [7:0]a;
+        dec=a-1;
+    endfunction
+    function [8:0]cmp;
+        input [7:0]a;
+        cmp={1'b0,~A}+1'b1;
+    endfunction
+    function [7:0]and1;
+        input [7:0]a,b;
+        and1=a&b;
+    endfunction
+    function [7:0]or1;
+        input [7:0]a,b;
+        or1=a|b;
+    endfunction
+    function [7:0]xor1;
+        input [7:0]a,b;
+        xor1=a^b;
+    endfunction
+endmodule
