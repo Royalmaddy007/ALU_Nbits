@@ -59,53 +59,53 @@ module aluNbit(
             end
                 5'b00111:begin out=w8;cout=c8;
             end
-				    5'b01000:begin out=w9;cout=c9;
+		5'b01000:begin out=w9;cout=c9;
             end
-				    5'b01001:begin out=w10;cout=c10;
+		5'b01001:begin out=w10;cout=c10;
             end
-				    5'b01010:begin out=w11;cout=c11;
+		5'b01010:begin out=w11;cout=c11;
             end
-				    5'b01011:begin out=w12;cout=c12;
+		5'b01011:begin out=w12;cout=c12;
             end
-				    5'b01100:begin out=w13;cout=c13;
+		5'b01100:begin out=w13;cout=c13;
             end
-				    5'b01101:begin out=w14;cout=c14;
+		5'b01101:begin out=w14;cout=c14;
             end
-				    5'b01110:begin out=w15;cout=c15;
+		5'b01110:begin out=w15;cout=c15;
             end
-				    5'b01111:begin out=w16;cout=c16;
+		5'b01111:begin out=w16;cout=c16;
             end
-				    5'b10000:begin out=w17;cout=c17;
+		5'b10000:begin out=w17;cout=c17;
             end
-				    5'b10001:begin out=w18;cout=c18;
+		5'b10001:begin out=w18;cout=c18;
             end
-				    5'b10010:begin out=w19;cout=c19;
+		5'b10010:begin out=w19;cout=c19;
             end
-				    5'b10011:begin out=w20;cout=c20;
+		5'b10011:begin out=w20;cout=c20;
             end
-				    5'b10100:begin out=w21;cout=c21;
+		5'b10100:begin out=w21;cout=c21;
             end
-				    5'b10101:begin out=w22;cout=c22;
+		5'b10101:begin out=w22;cout=c22;
             end
-				    5'b10110:begin out=w23;cout=c23;
+		5'b10110:begin out=w23;cout=c23;
             end
-				    5'b10111:begin out=w24;cout=c24;
+		5'b10111:begin out=w24;cout=c24;
             end
-				    5'b11000:begin out=w25;cout=c25;
+		5'b11000:begin out=w25;cout=c25;
             end
-				    5'b11001:begin out=w26;cout=c26;
+		5'b11001:begin out=w26;cout=c26;
             end
-				    5'b11010:begin out=w27;cout=c27;
+		5'b11010:begin out=w27;cout=c27;
             end
-				    5'b11011:begin out=w28;cout=c28;
+		5'b11011:begin out=w28;cout=c28;
             end
-				    5'b11100:begin out=w29;cout=c29;
+		5'b11100:begin out=w29;cout=c29;
             end
-				    5'b11101:begin out=w30;cout=c30;
+		5'b11101:begin out=w30;cout=c30;
             end
-				    5'b11110:begin out=w31;cout=c31;
+		5'b11110:begin out=w31;cout=c31;
             end
-					 5'b11111:begin out=w32;cout=c32;
+		5'b11111:begin out=w32;cout=c32;
             end
             endcase
         end
